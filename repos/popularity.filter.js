@@ -8,7 +8,7 @@
 
     return function sortByPopularity(input) {
       var popularity = input.map(function getPopularity(repo) {
-        repo.popularity = input.stargazers_count + ((2 * repo.forks_count) + (repo.open_issues_count/2));
+        repo.popularity = repo.stargazers_count + ((2 * repo.forks_count) + (repo.open_issues_count/2));
         return repo;
       });
 
